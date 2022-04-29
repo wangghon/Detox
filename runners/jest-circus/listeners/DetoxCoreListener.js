@@ -8,7 +8,7 @@ const {
   onTestDone,
   onRunDescribeFinish,
 } = require('../../integration').lifecycle;
-const { RETRY_TIMES } = require('jest-circus/build/types');
+const RETRY_TIMES = Symbol.for('RETRY_TIMES');
 
 class DetoxCoreListener {
   constructor({ detox, env }) {
